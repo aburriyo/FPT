@@ -1,0 +1,22 @@
+<!-- item_details.html -->
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Detalles del Ítem</h2>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+        </div>
+    
+    <h2>Usuarios que han agregado este ítem a su lista de deseos:</h2>
+    <ul>
+            <li>{{ item.user.username }}</li>
+            
+        {% for user in item.users %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endblock %}

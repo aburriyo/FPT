@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Agregar Ítem a la Lista de Deseos</h2>
+    <form action="{{ url_for('add_item') }}" method="post">
+        <div class="form-group">
+            <label for="item_name">Nombre del Ítem</label>
+            <input type="text" class="form-control" id="item_name" name="item_name" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+</div>
+{% endblock %}
